@@ -69,7 +69,7 @@ $ find src -name "*.spec.ts" -exec rm {} \;
 
 * along with adding the **schemas** `Array` property give it the `NO_ERRORS_SCHEMA` value
 
-```
+```typescript
 @NgModule({
   declarations: [
     AppleCardAnimationComponent
