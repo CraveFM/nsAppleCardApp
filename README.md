@@ -8,3 +8,7 @@ $ ns create nsAppleCardApp --template @nativescript/template-blank-ng --style=sc
 ```
 $ npm install @schematics/angular @nativescript/schematics tslint --save-dev 
 ```
+
+```
+$ ng generate module appleCard  --routing
+```
