@@ -33,7 +33,7 @@ $ find src -name "*.spec.ts" -exec rm {} \;
 - [ ] In the current `<GridLayout>`, replace 
 
 ```xml
-    <!-- Add your page content here -->
+	<!-- Add your page content here -->
 ```
 
 with 
