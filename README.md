@@ -5,25 +5,6 @@
 $ ns create nsAppleCardApp --template @nativescript/template-blank-ng
 ```
 
-```
-$ npm install @schematics/angular @nativescript/schematics tslint --save-dev 
-```
-
-```
-$ ng generate module appleCard  --routing
-```
-
-```
-$ ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=true --style=scss
-```
-
-```
-$ find src -name "*.tns.*" -exec rm {} \;  
-```
-
-```
-$ find src -name "*.spec.ts" -exec rm {} \;   
-```
 
 
 ## :a: Home Component
@@ -77,9 +58,35 @@ with
 }
 ```
 
+## :b: Apple Card Component
+
+:gear: template
 
 
-# Resources
+```
+$ npm install @schematics/angular @nativescript/schematics tslint --save-dev 
+```
+
+```
+$ ng generate module appleCard  --routing
+```
+
+```
+$ ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=true --style=scss
+```
+
+```
+$ find src -name "*.tns.*" -exec rm {} \;  
+```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;   
+```
+
+:round_pushpin: template
+
+
+## :construction: Resources
 
 - [ ] Fonts
 
