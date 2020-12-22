@@ -3,8 +3,8 @@ import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "@nativescript/angular";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/home", pathMatch: "full" },
-    { path: "home", loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule) }
+    { path: "", redirectTo: "/appleCard", pathMatch: "full" },
+    { path: "appleCard", loadChildren: () => import("./apple-card/apple-card.module").then(m => m.AppleCardModule) }, // lazy loaded module
 ];
 
 @NgModule({
