@@ -32,6 +32,12 @@ const routes: Routes = [
 
 :pushpin: Apple Card Animation Component
 
+:gear: Since we'll be using [saas](https://docs.nativescript.org/ui/theme#sass-usage), let's add the `sass` package
+
+```
+$ npm install sass --save-dev
+```
+
 - [ ] Generate the component
 
 ```
