@@ -16,3 +16,11 @@ $ ng generate module appleCard  --routing
 ```
 $ ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=true --style=scss
 ```
+
+```
+$ find src -name "*.tns.*" -exec rm {} \;  
+```
+
+```
+$ find src -name "*.spec.ts" -exec rm {} \;   
+```
