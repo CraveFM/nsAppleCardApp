@@ -284,7 +284,9 @@ $theme-list-map: (
 }
 ```
 
-:round_pushpin: Edit the `apple-card-animation.component.html` template
+:round_pushpin: Template
+
+- [ ] Edit the `apple-card-animation.component.html` template
 
 ```xml
 <ActionBar title="Apple Card">
