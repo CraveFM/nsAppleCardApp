@@ -26,6 +26,57 @@ $ find src -name "*.spec.ts" -exec rm {} \;
 ```
 
 
+## :a: Home Component
+
+:round_pushpin: template
+
+- [ ] Replace the `<!-- Add your page content here -->` in the current `<GridLayout>` 
+
+```xml
+    <!-- Add your page content here -->
+```
+
+with 
+
+```xml
+	<ScrollView>
+		<StackLayout class="home-panel">
+			<!--Add your page content here-->
+			<Label textWrap="true" text="Play with NativeScript!" class="h2 description-label"></Label>
+			<Label textWrap="true" text="Write code in the editor or drag and drop components to build a NativeScript mobile application."
+			 class="h2 description-label"></Label>
+			<Label textWrap="true" text="Scan the QR code with your mobile device and watch the changes sync live while you play with the code."
+			 class="h2 description-label"></Label>
+		</StackLayout>
+	</ScrollView>
+```
+
+:round_pushpin:  StyleSheet
+
+- [ ] Open the `home.component.ts` class file, add the `styleUrls` property to the `@Component` Decorator:
+
+```typescript
+@Component({
+    selector: "Home",
+    templateUrl: "./home.component.html",
+    styleUrls: ['./home.component.css']
+})
+```
+
+- [ ] Add a new file `home.component.ccs`
+
+```css
+.home-panel{
+    vertical-align: center; 
+    font-size: 20;
+    margin: 15;
+}
+
+.description-label{
+    margin-bottom: 15;
+}
+```
+
 
 
 # Resources
