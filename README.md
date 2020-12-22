@@ -39,7 +39,7 @@ const routes: Routes = [
 ];
 ```
 
-:pushpin: Apple Card Animation Component
+:pushpin: Apple Card [Animation](https://docs.nativescript.org/ui/animation-code) Component
 
 :gear: Since we'll be using [saas](https://docs.nativescript.org/ui/theme#sass-usage), let's add the `sass` package
 
