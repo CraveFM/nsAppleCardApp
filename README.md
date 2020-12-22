@@ -76,6 +76,14 @@ $ find src -name "*.spec.ts" -exec rm {} \;
 export class AppleCardModule { }
 ```
 
+- [ ] Edit the `apple-card-routing.module.ts` and add a default component value to the routing
+
+```typescript
+const routes: Routes = [
+  { path: "", component: AppleCardAnimationComponent}
+];
+```
+
 
 :round_pushpin: in the `AppleCardAnimationComponent` `Class`
 
