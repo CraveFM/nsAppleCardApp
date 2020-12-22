@@ -5,75 +5,40 @@
 $ ns create nsAppleCardApp --template @nativescript/template-blank-ng
 ```
 
+## :a: Apple Card Component
 
-
-## :a: Home Component
-
-:round_pushpin: template
-
-- [ ] In the current `<GridLayout>`, replace 
-
-```xml
-	<!-- Add your page content here -->
-```
-
-with 
-
-```xml
-	<ScrollView>
-		<StackLayout class="home-panel">
-			<!--Add your page content here-->
-			<Label textWrap="true" text="Play with NativeScript!" class="h2 description-label"></Label>
-			<Label textWrap="true" text="Write code in the editor or drag and drop components to build a NativeScript mobile application."
-			 class="h2 description-label"></Label>
-			<Label textWrap="true" text="Scan the QR code with your mobile device and watch the changes sync live while you play with the code."
-			 class="h2 description-label"></Label>
-		</StackLayout>
-	</ScrollView>
-```
-
-:round_pushpin:  StyleSheet
-
-- [ ] Open the `home.component.ts` class file, add the `styleUrls` property to the `@Component` Decorator:
-
-```typescript
-@Component({
-    selector: "Home",
-    templateUrl: "./home.component.html",
-    styleUrls: ['./home.component.css']
-})
-```
-
-- [ ] Add a new file `home.component.ccs`
-
-```css
-.home-panel{
-    vertical-align: center; 
-    font-size: 20;
-    margin: 15;
-}
-
-.description-label{
-    margin-bottom: 15;
-}
-```
-
-## :b: Apple Card Component
-
-:gear: template
-
+:gear: Angular CLI schematics generation tools
 
 ```
 $ npm install @schematics/angular @nativescript/schematics tslint --save-dev 
 ```
 
+:round_pushpin: Apple Card Module
+
+- [ ] Generate the module
+
 ```
 $ ng generate module appleCard  --routing
 ```
 
+- [ ] Edit `app-routing.module.ts` and replace the entire `routes` JSON array bypassing the `Home` Module
+
+```typescript
+const routes: Routes = [
+    { path: "", redirectTo: "/appleCard", pathMatch: "full" },
+    { path: "appleCard", loadChildren: () => import("./apple-card/apple-card.module").then(m => m.AppleCardModule) }, // lazy loaded module
+];
+```
+
+:round_pushpin: Apple Card Animation Component
+
+- [ ] Generate the component
+
 ```
 $ ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=true --style=scss
 ```
+
+* do some clean up
 
 ```
 $ find src -name "*.tns.*" -exec rm {} \;  
@@ -82,6 +47,8 @@ $ find src -name "*.tns.*" -exec rm {} \;
 ```
 $ find src -name "*.spec.ts" -exec rm {} \;   
 ```
+
+
 
 :round_pushpin: template
 
