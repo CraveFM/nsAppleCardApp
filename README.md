@@ -105,6 +105,9 @@ $ find src -name "*.spec.ts" -exec rm {} \;
   }
 ```
 
+:round_pushpin:  StyleSheet
+
+- [ ] Open the `apple-card-animation.component.scss` class file, add the below styles:
 
 ```scss
 $content-buttons-border-color: #EBEBEB;
