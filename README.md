@@ -107,7 +107,7 @@ const routes: Routes = [
 
 - [ ] Edit the constructor
 
-```typesccript
+```typescript
     constructor(private _page: Page) { }
 ```
 
