@@ -13,7 +13,7 @@ $ ns create nsAppleCardApp --template @nativescript/template-blank-ng
 $ npm install @schematics/angular @nativescript/schematics tslint --save-dev 
 ```
 
-:round_pushpin: Apple Card Module
+:pushpin: Apple Card Module
 
 - [ ] Generate the module
 
@@ -30,7 +30,7 @@ const routes: Routes = [
 ];
 ```
 
-:round_pushpin: Apple Card Animation Component
+:pushpin: Apple Card Animation Component
 
 - [ ] Generate the component
 
