@@ -54,6 +54,28 @@ $ find src -name "*.tns.*" -exec rm {} \;
 $ find src -name "*.spec.ts" -exec rm {} \;   
 ```
 
+- [ ] Attach the component to the Module by editing the `apple-card.module.ts`
+
+* add the `AppleCardAnimationComponent` to the **declarations** `Array` property 
+
+* along with adding the **schemas** `Array` property give it the `NO_ERRORS_SCHEMA` value
+
+```
+@NgModule({
+  declarations: [
+    AppleCardAnimationComponent
+  ],
+  imports: [
+    CommonModule,
+    AppleCardRoutingModule
+  ],
+  schemas: [
+    NO_ERRORS_SCHEMA
+  ]
+})
+export class AppleCardModule { }
+```
+
 
 :round_pushpin: in the `AppleCardAnimationComponent` `Class`
 
