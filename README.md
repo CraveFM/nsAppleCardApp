@@ -30,7 +30,7 @@ $ find src -name "*.spec.ts" -exec rm {} \;
 
 :round_pushpin: template
 
-- [ ] Replace the `<!-- Add your page content here -->` in the current `<GridLayout>` 
+- [ ] In the current `<GridLayout>`, replace 
 
 ```xml
     <!-- Add your page content here -->
