@@ -505,7 +505,7 @@ $ cp -r NSPlayground/app/fonts src
 
 - [ ] Images
 
-* copy `images` folder to the `src` directory
+* copy `images` folder to the `src/assets` directory
 
 ```
 $ cp -r NSPlayground/app/images src/assets
