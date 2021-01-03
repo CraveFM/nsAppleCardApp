@@ -160,7 +160,7 @@ $white-color: #ffffff;
 $black-color: #000000;
 
 @mixin set-bg-image($imageName) {
-  background-image: url("~/images/#{$imageName}.png");
+  background-image: url("~/assets/#{$imageName}.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -508,18 +508,17 @@ $ cp -r NSPlayground/app/fonts src
 * copy `images` folder to the `src` directory
 
 ```
-$ cp -r NSPlayground/app/images src 
+$ cp -r NSPlayground/app/images src/assets
 ```
 
-- [ ] Edit `webpack.config.js` file
+- [ ] Confirm `webpack.config.js` file as the `copyTargets` array constant with the `assets` `glob`
 
-* locate the `copyTargets` variable and add the `from: 'images/**'` JSON section like below
+* locate the `copyTargets` variable and observe the `{ from: { glob: 'assets/**', dot: false } },` JSON object like below
 
 ```javascript
-const copyTargets = [
-    { from: 'assets/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-    { from: 'fonts/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-    { from: 'images/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-    ...copyReplacements
+  const copyTargets = [
+    { from: { glob: 'assets/**', dot: false } },
+    { from: { glob: 'fonts/**', dot: false } },
+    ...copyReplacements,
   ];
 ```
