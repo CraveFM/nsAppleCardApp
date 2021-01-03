@@ -8,7 +8,10 @@ Example taken from [:bookmark:`nativescript.rocks`](https://plugins.nativescript
 
 ## :o: Create a project by using this template
 
-
+```
+$ ns --version
+7.1.1
+```
 
 ```
 $ ns create nsAppleCardApp --template @nativescript/template-blank-ng
