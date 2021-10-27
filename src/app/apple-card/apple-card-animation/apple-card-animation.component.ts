@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { GridLayout, Page } from '@nativescript/core';
 
 @Component({
-  selector: 'ns-apple-card-animation',
+  selector: 'app-apple-card-animation',
   templateUrl: './apple-card-animation.component.html',
   styleUrls: ['./apple-card-animation.component.scss']
 })
@@ -23,7 +23,6 @@ export class AppleCardAnimationComponent implements OnInit, AfterViewInit {
     this.backAppleCard = this._page.getViewById('backAppleCard');
     this.appleCardParentView = this._page.getViewById('appleCardParentView');
   }
-
   onThemeSelectorTap(theme: string): void {
     this.appleCardParentView.className = theme;
   }

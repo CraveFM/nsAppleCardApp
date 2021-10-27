@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
+import { NativeScriptRouterModule } from '@nativescript/angular'
 import { AppleCardAnimationComponent } from './apple-card-animation/apple-card-animation.component';
 
 const routes: Routes = [
@@ -7,7 +8,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [NativeScriptRouterModule.forChild(routes)],
+  exports: [NativeScriptRouterModule]
 })
 export class AppleCardRoutingModule { }
