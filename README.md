@@ -38,16 +38,14 @@ unzip ~/Downloads/NSPlayground.zip -d NSPlayground
 cp -r NSPlayground/app/images src/assets
 ```
 
-- [ ] Confirm `webpack.config.js` file as the `copyTargets` array constant with the `assets` `glob`
+- [ ] Confirm `webpack.config.js` 
 
-* locate the `copyTargets` variable and observe the `{ from: { glob: 'assets/**', dot: false } },` JSON object like below
 
 ```javascript
-  const copyTargets = [
-    { from: { glob: 'assets/**', dot: false } },
-    { from: { glob: 'fonts/**', dot: false } },
-    ...copyReplacements,
-  ];
+  // Copy all assets files to the build directory
+  webpack.Utils.addCopyRule('assets/**')
+  // Copy all fonts files to the build directory
+  webpack.Utils.addCopyRule('fonts/**')
 ```
 
 ## :a: Apple Card Component
