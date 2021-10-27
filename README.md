@@ -26,6 +26,35 @@ ns create nsAppleCardApp --template @nativescript/template-blank-ng
 npm install @schematics/angular @nativescript/schematics tslint --save-dev 
 ```
 
+- [ ] Create the `angular.json` file
+
+```json
+cat <<EOF > angular.json
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
+  },
+  "projects": {
+    "project-name": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    }
+  },
+  "defaultProject": "project-name"
+}
+EOF
+```
+
 :pushpin: Apple Card Module
 
 - [ ] Generate the module
