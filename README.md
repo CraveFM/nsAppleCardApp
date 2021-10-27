@@ -18,6 +18,27 @@ Example taken from [:bookmark:`nativescript.rocks`](https://plugins.nativescript
 ns create nsAppleCardApp --template @nativescript/template-blank-ng
 ```
 
+:gear: Reverse Engineering 
+
+- [ ] Create a `NSPlayground` directory 
+
+- [ ] Download the old {N} 6.0 project from [Playground]https://play.nativescript.org/?template=play-ng&id=l5mqoy&v=6)
+
+- [ ] Move the `NSPlayground.zip` file to the `NSPlayground` directory in the project
+
+```
+unzip ~/Downloads/NSPlayground.zip -d NSPlayground
+```
+
+- [ ] Assets
+
+* copy `assets` folder to the `src` directory
+
+```
+cp -r NSPlayground/app/assets src
+```
+
+
 ## :a: Apple Card Component
 
 :gear: Angular CLI schematics generation tools
