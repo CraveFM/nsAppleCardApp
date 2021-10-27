@@ -89,16 +89,6 @@ npm install sass --save-dev
 ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=true --style=scss
 ```
 
-* do some clean up
-
-```
-find src -name "*.tns.*" -exec rm {} \;  
-```
-
-```
-find src -name "*.spec.ts" -exec rm {} \;   
-```
-
 - [ ] Attach the component to the Module by editing the `apple-card.module.ts`
 
 * add the `AppleCardAnimationComponent` to the **declarations** `Array` property 
