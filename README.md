@@ -35,7 +35,7 @@ unzip ~/Downloads/NSPlayground.zip -d NSPlayground
 * copy `images` folder to the `src/assets` directory
 
 ```
-$ cp -r NSPlayground/app/images src/assets
+cp -r NSPlayground/app/images src/assets
 ```
 
 - [ ] Confirm `webpack.config.js` file as the `copyTargets` array constant with the `assets` `glob`
