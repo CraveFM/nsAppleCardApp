@@ -14,7 +14,7 @@ $ ns --version
 ```
 
 ```
-$ ns create nsAppleCardApp --template @nativescript/template-blank-ng
+ns create nsAppleCardApp --template @nativescript/template-blank-ng
 ```
 
 ## :a: Apple Card Component
@@ -22,7 +22,7 @@ $ ns create nsAppleCardApp --template @nativescript/template-blank-ng
 :gear: Angular CLI schematics generation tools
 
 ```
-$ npm install @schematics/angular @nativescript/schematics tslint --save-dev 
+npm install @schematics/angular @nativescript/schematics tslint --save-dev 
 ```
 
 :pushpin: Apple Card Module
@@ -30,7 +30,7 @@ $ npm install @schematics/angular @nativescript/schematics tslint --save-dev
 - [ ] Generate the module
 
 ```
-$ ng generate module appleCard  --routing
+ng generate module appleCard  --routing
 ```
 
 - [ ] Edit `app-routing.module.ts` and replace the entire `routes` JSON array bypassing the `Home` Module
@@ -47,23 +47,23 @@ const routes: Routes = [
 :gear: Since we'll be using [saas](https://docs.nativescript.org/ui/theme#sass-usage), let's add the `sass` package
 
 ```
-$ npm install sass --save-dev
+npm install sass --save-dev
 ```
 
 - [ ] Generate the component
 
 ```
-$ ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=true --style=scss
+ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=true --style=scss
 ```
 
 * do some clean up
 
 ```
-$ find src -name "*.tns.*" -exec rm {} \;  
+find src -name "*.tns.*" -exec rm {} \;  
 ```
 
 ```
-$ find src -name "*.spec.ts" -exec rm {} \;   
+find src -name "*.spec.ts" -exec rm {} \;   
 ```
 
 - [ ] Attach the component to the Module by editing the `apple-card.module.ts`
