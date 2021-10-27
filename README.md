@@ -96,16 +96,16 @@ ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=t
 * along with adding the **schemas** `Array` property give it the `NO_ERRORS_SCHEMA` value
 
 ```typescript
+import { NgModule } from '@angular/core';
+
+import { AppleCardRoutingModule } from './apple-card-routing.module';
+import { AppleCardAnimationComponent } from './apple-card-animation/apple-card-animation.component'
+
+
 @NgModule({
-  declarations: [
-    AppleCardAnimationComponent
-  ],
+  declarations: [AppleCardAnimationComponent],
   imports: [
-    CommonModule,
     AppleCardRoutingModule
-  ],
-  schemas: [
-    NO_ERRORS_SCHEMA
   ]
 })
 export class AppleCardModule { }
@@ -427,6 +427,40 @@ $theme-list-map: (
 
 ## :construction: Resources
 
+:gear: `Fonts` settings
+
+To demonstrate the platform segragation, using `Font Awesome` Fonts to display the respective platform icon will be useful
+
+
+- [ ] `Font Awesome` 5.15.1 Fonts
+
+* Download the [fontawesome-free-5.15.1-web.zip](https://github.com/FortAwesome/Font-Awesome/releases/download/5.15.1/fontawesome-free-5.15.1-web.zip) file from github 
+
+* unzip the file which should be installed in the `~/Downloads` directory
+
+```
+unzip ~/Downloads/fontawesome-free-5.15.1-web.zip
+```
+
+* create the `fonts` directory
+
+```
+mkdir src/fonts
+```
+
+* install the `fonts` files
+
+```
+cp fontawesome-free-5.15.1-web/webfonts/*.ttf src/fonts
+```
+
+* clean up the zip file
+
+```
+rm -rf fontawesome-free-5.15.1-web
+```
+
+
 - [ ] Fonts
 
 * Edit `app.css`
@@ -447,13 +481,7 @@ $theme-list-map: (
 }
 ```
 
-* copy `fonts` folder to the `src` directory
-
-```
-$ cp -r NSPlayground/app/fonts src 
-```
-
-* check tha the fonts are installed
+* check that the fonts are installed
 
 ```
 $ ns fonts
