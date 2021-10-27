@@ -30,14 +30,25 @@ ns create nsAppleCardApp --template @nativescript/template-blank-ng
 unzip ~/Downloads/NSPlayground.zip -d NSPlayground
 ```
 
-- [ ] Assets
+- [ ] Images
 
-* copy `assets` folder to the `src` directory
+* copy `images` folder to the `src/assets` directory
 
 ```
-cp -r NSPlayground/app/assets src
+$ cp -r NSPlayground/app/images src/assets
 ```
 
+- [ ] Confirm `webpack.config.js` file as the `copyTargets` array constant with the `assets` `glob`
+
+* locate the `copyTargets` variable and observe the `{ from: { glob: 'assets/**', dot: false } },` JSON object like below
+
+```javascript
+  const copyTargets = [
+    { from: { glob: 'assets/**', dot: false } },
+    { from: { glob: 'fonts/**', dot: false } },
+    ...copyReplacements,
+  ];
+```
 
 ## :a: Apple Card Component
 
@@ -617,14 +628,6 @@ Error while loading nativescript-cloud is: Default commands should be required b
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards; 
 }
-```
-
-- [ ] Images
-
-* copy `images` folder to the `src/assets` directory
-
-```
-$ cp -r NSPlayground/app/images src/assets
 ```
 
 - [ ] Confirm `webpack.config.js` file as the `copyTargets` array constant with the `assets` `glob`
