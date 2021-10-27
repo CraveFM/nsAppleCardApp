@@ -41,7 +41,7 @@ cp -r NSPlayground/app/images src/assets
 - [ ] Confirm `webpack.config.js` 
 
 
-```javascript
+```javascript 
   // Copy all assets files to the build directory
   webpack.Utils.addCopyRule('assets/**')
   // Copy all fonts files to the build directory
