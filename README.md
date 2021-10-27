@@ -67,8 +67,11 @@ ng generate module appleCard  --routing
 
 ```typescript
 const routes: Routes = [
-    { path: "", redirectTo: "/appleCard", pathMatch: "full" },
-    { path: "appleCard", loadChildren: () => import("./apple-card/apple-card.module").then(m => m.AppleCardModule) }, // lazy loaded module
+  { path: '', redirectTo: '/appleCard', pathMatch: 'full' },
+  {
+    path: 'appleCard',
+    loadChildren: () => import('~/app/apple-card/apple-card.module').then(m => m.AppleCardModule) // lazy loaded module
+  }
 ];
 ```
 
