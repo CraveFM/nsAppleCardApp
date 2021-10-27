@@ -9,8 +9,9 @@ Example taken from [:bookmark:`nativescript.rocks`](https://plugins.nativescript
 ## :o: Create a project by using this template
 
 ```
-$ ns --version
-7.1.1
+% ns --version
+8.1.4
+✔ Up to date.
 ```
 
 ```
