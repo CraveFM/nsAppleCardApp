@@ -126,7 +126,7 @@ ng generate component apple-card/appleCardAnimation  --skip-import --skipTests=t
 * along with adding the **schemas** `Array` property give it the `NO_ERRORS_SCHEMA` value
 
 ```typescript
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AppleCardRoutingModule } from './apple-card-routing.module';
 import { AppleCardAnimationComponent } from './apple-card-animation/apple-card-animation.component'
@@ -136,7 +136,8 @@ import { AppleCardAnimationComponent } from './apple-card-animation/apple-card-a
   declarations: [AppleCardAnimationComponent],
   imports: [
     AppleCardRoutingModule
-  ]
+  ],
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppleCardModule { }
 ```
